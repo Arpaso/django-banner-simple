@@ -1,0 +1,5 @@
+include README.rst
+include MANIFEST.in
+recursive-include src/banner/templates *
+recursive-include src/banner/media *
+recursive-include src/banner/locale *
