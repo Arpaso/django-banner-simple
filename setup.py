@@ -14,7 +14,7 @@ install_requires = [
         'setuptools',
         'Django',
         'django-native-tags',
-        'sorl-thumbnail',
+        'sorl-thumbnail => 11.01',
 ]
 
 #Execute function to handle setuptools functionality
