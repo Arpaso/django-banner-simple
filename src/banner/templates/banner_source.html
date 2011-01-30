@@ -1,6 +1,6 @@
 {% load thumbnail %}
 <a href="{{ banner.link }}">
-    {% thumbnail banner.image size crop="center" as im %}
+    {% thumbnail banner.image size upscale="True" as im %}
         <img class="{{ banner.slug }} banner" 
           width="{{ width }}" height="{{ height }}"
           src="{{ im.url }}" alt="{{ object.title }}" 
