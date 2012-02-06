@@ -1,13 +1,11 @@
 {% load thumbnail %}
 <a href="{{ banner.link }}">
-    {% thumbnail banner.image size upscale="True" as im %}
+    {% thumbnail banner.image size as im %}
         <img class="{{ banner.slug }} banner" 
           width="{{ width }}" height="{{ height }}"
           src="{{ im.url }}" alt="{{ object.title }}" 
         />
     {% empty %}
-        <img class="{{ banner.slug }} banner" src="{{ STATIC_URL }}images/default_banner.jpg" 
-          width="{{ width }}" height="{{ height }}" alt="{{ banner.slug }}" 
-        />
+        <!-- Provide banner image -->
     {% endthumbnail %}
 </a>

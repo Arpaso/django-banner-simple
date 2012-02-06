@@ -10,8 +10,7 @@ from .utils import default_upload_to
 class Banner(models.Model):
 
     slug = models.SlugField(_("Unique identifier"), unique=True)
-    image = ImageField(_(u"Banner's image"), upload_to=default_upload_to,
-                       default='images/default_banner.jpg')
+    image = ImageField(_(u"Banner's image"), max_length=255, upload_to=default_upload_to, blank=True)
     link = models.CharField(_("External link"), max_length=255, blank=True, null=True)
     
     class Meta:
