@@ -1,5 +1,7 @@
 ### -*- coding: utf-8 -*- ####################################################
 
+import random
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -20,3 +22,23 @@ class Banner(models.Model):
     
     def __unicode__(self):
         return u"Banner: %s" % self.slug
+    
+    def get_image(self):
+        """Returns random image using alternatives"""
+        images = []
+        if self.image:
+            images.append(self.image)
+        
+        images.extend([i.image for i in self.alternatives.all()])
+        
+        return random.choice(images) if images else ''
+
+class AlternativeImage(models.Model):
+    
+    banner = models.ForeignKey(Banner, verbose_name=_("banner"), related_name="alternatives")
+    
+    image = ImageField(_("image"), upload_to=default_upload_to)
+    
+    class Meta:
+        verbose_name = _("alternative image")
+        verbose_name_plural = _("alternative images")

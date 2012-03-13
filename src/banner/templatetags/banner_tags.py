@@ -10,7 +10,7 @@ def get_banner(slug, width, height, queryset=Banner.objects.all()):
     return "banner_source.html", {
                 'banner': banner, 'size': "%ix%i" % (width, height), 
                 'width': width, 'height': height, 
-                'STATIC_URL': settings.STATIC_URL
+                'STATIC_URL': settings.STATIC_URL,
     }
 
 get_banner = function(get_banner, inclusion=True, cache=60)
