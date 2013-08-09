@@ -30,7 +30,7 @@ Usage
 
 .. NOTE:: get_banner(slug, width, height, queryset=Banner.objects.all())
 
-Uses also settings.STATIC_URL to display banner image.
+Uses also **settings.STATIC_URL** to display banner image.
 
 
 
