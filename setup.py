@@ -30,6 +30,7 @@ setup(name="django-banner-simple",
     author='Arpaso',
     author_email='arvid@arpaso.com',
     url='https://github.com/Arpaso/django-banner-simple',
+    download_url='https://github.com/Arpaso/django-banner-simple/tarball/0.1',
     classifiers=(
         "Framework :: Django",
         "Intended Audience :: Developers",
