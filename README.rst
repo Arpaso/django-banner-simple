@@ -32,7 +32,6 @@ Usage
 
 Uses also **settings.STATIC_URL** to display banner image.
 
-
-
+Written by the development team of Arpaso company: http://arpaso.com
 
 
